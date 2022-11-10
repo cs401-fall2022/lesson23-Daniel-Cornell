@@ -22,3 +22,20 @@
     width: 80%;
 }
 
+.createForm{
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+.redOutline{
+    border: 2px solid red;
+}
+
+#textLabel{
+    vertical-align: top;
+}

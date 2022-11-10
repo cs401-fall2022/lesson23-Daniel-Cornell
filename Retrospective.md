@@ -33,4 +33,4 @@ https://stackoverflow.com/questions/40227087/get-data-from-express-with-fetch
 https://stackoverflow.com/questions/21640561/javascript-xmlhttprequest-access-control-allow-origin-errors
 https://www.npmjs.com/package/cors
 https://blog.devgenius.io/3-ways-to-center-a-div-with-css-3df9e66dbd42
-
+https://css-tricks.com/snippets/html/form-submission-new-window/

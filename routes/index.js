@@ -27,13 +27,11 @@ router.get('/home', function(req, res, next) {
                     console.log("Creating table");
                     db.exec(`CREATE TABLE blog (id INTEGER PRIMARY KEY AUTOINCREMENT, title VARCHAR(60) NOT NULL,
                         txt text NOT NULL, date DATETIME NOT NULL DEFAULT(DATETIME('now')));`,
-                        //INSERT INTO blog (title, txt) VALUES ('test first entry', 'This is a description'), ('Another entry', 'Another Description');`,
                         () => {
-                            db.exec(`INSERT INTO blog (title, txt) VALUES ('test first entry', 'This is a description'), ('Another entry', 'Another Description');`);
                             db.all(`SELECT title, txt, date FROM blog ORDER BY date DESC`, 
                             (err, rows) => {
                                 console.log(rows);
-                                // TODO add displaying data to page
+                                res.json(rows);
                             });
                         }
                     );
@@ -54,8 +52,9 @@ router.post('/add', (req, res, next) => {
         }
         
         //Sanitizes input
-        if (req.body.text && req.body.title && req.body.title.length <= 60) {
+        if (req.body.txt && req.body.title && req.body.title.length <= 60) {
             db.exec(`INSERT INTO blog (title, txt) VALUES ('${req.body.title}','${req.body.txt}');`);
+            res.sendStatus(201);
         } else {
             console.log("Invalid input for creating a new blog");
         }

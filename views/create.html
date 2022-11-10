@@ -2,18 +2,21 @@
 <html>
     <head>
         <title>Add blog</title>
+        <link rel="stylesheet" href="../public/stylesheets/style.css">
+        <script src="../public/javascripts/validateCreate.js" defer></script>
     </head>
     <body>
-        <form action="http://localhost:3000/add" method="post">
+        <!-- TODO investigate redirect bug if time permits -->
+        <form action="http://localhost:3000/add" method="post" class="createForm" target="user.html">
             <p>
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title">
             </p>
             <p>
-                <label for="text">Text</label>
-                <textarea id="text" name="text" rows="10" cols="100"></textarea>
+                <label for="txt" id="textLabel">Text</label>
+                <textarea id="txt" name="txt" rows="10" cols="100"></textarea>
             </p>
-            <input type="submit">
+            <input id="submitCreate" type="submit">
         </form>
     </body>
 </html>
