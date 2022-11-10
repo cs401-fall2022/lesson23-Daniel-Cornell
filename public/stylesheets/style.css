@@ -1,0 +1,24 @@
+.title{
+    font-size: 30px;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.entry{
+    background-color: gray;
+    position: relative;
+    left: 9%;
+    margin: 30px;
+    width: 80%;
+}
+
