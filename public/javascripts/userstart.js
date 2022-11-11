@@ -7,7 +7,7 @@ function updatePage() {
         let tempDiv = document.createElement("div");
         tempDiv.className = "entry"
         tempDiv.innerHTML = `<div class="title">${responseJson[rowIndex].title} ${responseJson[rowIndex].date}</div>
-            <br><p class="text">${responseJson[rowIndex].txt}</p>`;
+            <p class="text">${responseJson[rowIndex].txt}</p>`;
         outputArea.appendChild(tempDiv);
     }
 }
