@@ -60,10 +60,23 @@
     margin-top: -40px;
 }
 
-#userPageTitle{
+.titletext{
     padding-top: 15px;
 }
 
 body{
     margin: 0px;
+}
+
+#submitCreate{
+    margin-left: 40px;
+    height: 40px;
+    width: 100px;
+    background-color: #a7f59d;
+    border: 1px solid black;
+}
+
+#warning{
+    margin-left: 40px;
+    font-size: 20px;
 }

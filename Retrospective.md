@@ -34,3 +34,4 @@ https://stackoverflow.com/questions/21640561/javascript-xmlhttprequest-access-co
 https://www.npmjs.com/package/cors
 https://blog.devgenius.io/3-ways-to-center-a-div-with-css-3df9e66dbd42
 https://css-tricks.com/snippets/html/form-submission-new-window/
+https://w3codegenerator.com/generators/dummy-text-generator

@@ -6,6 +6,11 @@
         <script src="../public/javascripts/validateCreate.js" defer></script>
     </head>
     <body>
+        <div class="heading">
+            <div class="titletext">
+                Blog Creator
+            </div>
+        </div>
         <!-- TODO investigate redirect bug if time permits -->
         <form action="http://localhost:3000/add" method="post" class="createForm" target="user.html">
             <p>
@@ -16,7 +21,7 @@
                 <label for="txt" id="textLabel">Text</label>
                 <textarea id="txt" name="txt" rows="10" cols="100"></textarea>
             </p>
-            <input id="submitCreate" type="submit">
+            <input id="submitCreate" type="submit" value="Create Blog">
         </form>
     </body>
 </html>
