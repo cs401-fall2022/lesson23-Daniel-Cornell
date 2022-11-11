@@ -7,11 +7,12 @@
 }
 
 .text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding-bottom: 10px;
     font-size: 18px;
+    word-wrap: break-word;
+    width: 90%;
+    text-align: center;
+    padding-left: 5%;
 }
 
 .entry{
@@ -20,6 +21,7 @@
     left: 9%;
     margin: 30px;
     width: 80%;
+    align-items: center;
 }
 
 .createForm{

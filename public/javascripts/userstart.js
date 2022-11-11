@@ -1,5 +1,4 @@
 function updatePage() {
-    console.log("Response " + this.responseText);
     let responseJson = JSON.parse(this.responseText); 
     let outputArea = document.getElementById("entries");
 
