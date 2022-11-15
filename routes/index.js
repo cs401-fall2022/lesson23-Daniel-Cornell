@@ -16,7 +16,7 @@ router.get('/home', function(req, res, next) {
             (err, rows) => {
                 if(rows.length >= 1){
                     console.log("Table exists");
-                    db.all(`SELECT title, txt, date FROM blog ORDER BY date DESC`, 
+                    db.all(`SELECT id, title, txt, date FROM blog ORDER BY date DESC`, 
                         (err, rows) => {
                             console.log(`returning ${rows.length} records`);
                             console.log(rows);
@@ -28,7 +28,7 @@ router.get('/home', function(req, res, next) {
                     db.exec(`CREATE TABLE blog (id INTEGER PRIMARY KEY AUTOINCREMENT, title VARCHAR(60) NOT NULL,
                         txt text NOT NULL, date DATETIME NOT NULL DEFAULT(DATETIME('now')));`,
                         () => {
-                            db.all(`SELECT title, txt, date FROM blog ORDER BY date DESC`, 
+                            db.all(`SELECT id, title, txt, date FROM blog ORDER BY date DESC`, 
                             (err, rows) => {
                                 console.log(rows);
                                 res.json(rows);
@@ -62,32 +62,25 @@ router.post('/add', (req, res, next) => {
 });
 
 // Creates a DELETE HTTP endpoint to delete an entry based on ID
-router.post('/delete', (req, res, next) => {
+router.delete('/delete/:entryId', (req, res, next) => {
     let db = new sqlite3.Database('testdb.sqlite3', sqlite3.OPEN_CREATE | sqlite3.OPEN_READWRITE,
     (err) => {
         if(err){
             console.log("ERROR " + err);
             exit(1);
         }
-
         //Validates input and conditions
-        if (req.body.idnum) {
-            db.all(`SELECT * FROM blog WHERE id = ${req.body.idnum}`,
-                (err, rows) => {
-                    if (rows < 1) {
-                        console.log("ID not found");
-                        res.redirect('/home');
-                    } else {
-                        console.log("Deleting " + req.body.idnum);
-                        db.exec(`DELETE FROM blog WHERE id='${req.body.idnum}';`);
-                        res.redirect('/home');
-                    }
+        db.all(`SELECT * FROM blog WHERE id = ${req.params.entryId}`,
+            (err, rows) => {
+                if (rows < 1) {
+                    console.log("ID not found");
+                } else {
+                    console.log("Deleting " + req.params.entryId);
+                    db.exec(`DELETE FROM blog WHERE id='${req.params.entryId}';`);
                 }
-            );
-        } else {
-            console.log("ERROR idnum not specified");
-            res.redirect('/home');
-        } 
+                res.json(null);
+            }
+        );
     });
 });
 
