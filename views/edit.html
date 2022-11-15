@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit blog</title>
+        <link rel="stylesheet" href="../public/stylesheets/style.css">
+        <!-- The validator for create works here -->
+        <script src="../public/javascripts/validateCreate.js" defer></script>
+        <!-- Script to add data to form -->
+        <script src="../public/javascripts/populateUpdate.js" defer></script>
+    </head>
+    <body>
+        <div class="heading">
+            <div class="titletext">
+                Blog Editor
+            </div>
+        </div>
+        <!-- TODO investigate redirect bug if time permits -->
+        <form action="http://localhost:3000/edit" method="post" target="user.html">
+            <p>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+            </p>
+            <p>
+                <label for="txt" id="textLabel">Text</label>
+                <textarea id="txt" name="txt" rows="10" cols="100"></textarea>
+            </p>
+            <input id="submitEdit" type="submit" value="Update Blog">
+        </form>
+    </body>
+</html>

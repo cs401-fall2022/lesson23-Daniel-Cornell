@@ -35,3 +35,4 @@ https://www.npmjs.com/package/cors
 https://blog.devgenius.io/3-ways-to-center-a-div-with-css-3df9e66dbd42
 https://css-tricks.com/snippets/html/form-submission-new-window/
 https://w3codegenerator.com/generators/dummy-text-generator
+https://errorsea.com/how-to-open-a-new-web-page-on-button-click-using-javascript/#:~:text=How%20to%20Open%20a%20New%20HTML%20Page%20On,to%20redirect%20the%20user%20to%20a%20new%20page.

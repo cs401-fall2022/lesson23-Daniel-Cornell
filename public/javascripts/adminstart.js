@@ -1,11 +1,17 @@
 function sendEdit(id) {
     console.log(`Editing entry ${id}`);
     // TODO Add edit functionality
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", `http://localhost:3000/setId/${id}`);
+    xhr.setRequestHeader('Access-Control-Allow-Headers','*');
+    xhr.send();
+
+    // Slight delay to allow request to go through
+    setTimeout(window.open('edit.html'), 250);
 }
 
 function sendDelete(id) {
     console.log(`Deleting entry ${id}`);
-    // TODO add delete functionality
     let xhr = new XMLHttpRequest();
     xhr.open("DELETE", `http://localhost:3000/delete/${id}`);
     xhr.setRequestHeader('Access-Control-Allow-Headers','*');
