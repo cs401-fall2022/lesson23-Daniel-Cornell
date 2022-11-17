@@ -3,10 +3,8 @@
     <head>
         <title>Edit blog</title>
         <link rel="stylesheet" href="../public/stylesheets/style.css">
-        <!-- The validator for create works here -->
-        <script src="../public/javascripts/validateCreate.js" defer></script>
-        <!-- Script to add data to form -->
         <script src="../public/javascripts/populateUpdate.js" defer></script>
+        <script src="../public/javascripts/validateEdit.js" defer></script>
     </head>
     <body>
         <div class="heading">
@@ -14,7 +12,6 @@
                 Blog Editor
             </div>
         </div>
-        <!-- TODO investigate redirect bug if time permits -->
         <form action="http://localhost:3000/edit" method="post" target="user.html">
             <p>
                 <label for="title">Title</label>

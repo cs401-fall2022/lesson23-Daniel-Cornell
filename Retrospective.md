@@ -1,35 +1,22 @@
 # Retrospective
 
-- name: Jane Doe
-- email: janedoe@u.boisestate.edu
-
-## Instructions
-
-For the **Experience** section you need to detail your experience with this lab. 
-
-- Were there any things that you struggled with? 
-- Were there any parts of this lab that were unclear or poorly specified? 
-- Were you able to get the entire project done?
-
-For the **Known issues or Bugs** section you need to detail any issues or bugs that you have in your
-code. For example maybe your code crashes randomly and you couldn't figure out why. If your code
-doesn't have any issues you can simply write NONE in this section.
-
-For the **Sources used** section you must detail any sources you used outside of the textbook or
-course website. If you write NONE in this section it is assumed that you didn't use google at all.
-Be safe CITE!
+- name: Daniel Cornell
+- email: danielcornell@u.boisestate.edu
 
 ## Experience
 
-TODO
+Creating this blogging website has been a really fun challenge. Most of the trouble that I had was with styling
+especially with the classic issue of trying to center a div. I even decided to implement some advanced checking
+on my edit/create pages with a style which was really fun to implement. Overall everything for this lab was well
+specified and I had a ton of fun working on it.
 
 ## Known issues or Bugs
 
-TODO
+For create and edit on form submittal a new tab saying Created pops up. This doesn't break the functionality
+so I don't find it to be a huge issue
 
 ## Sources used
 
-https://stackoverflow.com/questions/40227087/get-data-from-express-with-fetch
 https://stackoverflow.com/questions/21640561/javascript-xmlhttprequest-access-control-allow-origin-errors
 https://www.npmjs.com/package/cors
 https://blog.devgenius.io/3-ways-to-center-a-div-with-css-3df9e66dbd42

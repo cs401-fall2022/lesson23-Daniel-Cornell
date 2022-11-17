@@ -36,7 +36,7 @@ function updatePage() {
             <td>${data.date}</td>
             <td>
                 <button onclick="sendEdit(${data.id})">Edit</button>
-                <button onclick="sendDelete(${data.id})">Delete</button>
+                <button class="deleteBtn" onclick="sendDelete(${data.id})">Delete</button>
             </td>`;
         dataTable.appendChild(tempRow);
     }
