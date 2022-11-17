@@ -1,6 +1,6 @@
 // Performs validations for the edit page
-let validTitle = false;
-let validText = false;
+let validTitle = true;
+let validText = true;
 
 let titleElement = document.getElementById("title");
 let textAreaElement = document.getElementById("txt");
